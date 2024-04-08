@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:tr="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" href="/index/index.css" th:href="@{/index/index.css}">
+    <title>TitleIdea</title>
+</head>
+<body>
+    <div class="reviews">
+        <p>Відгук про перевезення</p>
+        <form action="/reviews/add" method="post">
+            <div>
+                <input class="enterprise input" type="text" placeholder="Назва компанії" name="enterprise"><br/>
+                <input class="from input" type="text" placeholder="Звідки їхали" name="locationFrom">
+                <input class="to input" type="text" placeholder="Куда прямували" name="locationTo">
+                <textarea name="reviews_text" id="review" cols="30" rows="10"></textarea>
+                <br/>
+                <input class="submit" type="submit">
+            </div>
+        </form>
+    </div>
+    <br/>
+
+    <div class="bloks">
+        <div class="reviews_blok1" th:each="review:${listReviews}">
+            <div class="_enterprice_name">
+                <p class="_enterprice_name_p" th:text="${review.getEnterpriseName()}"></p>
+            </div>
+            <div class="_enterprice_text">
+                <p class="_enterprice_text_p" th:text="${review.getMessage()}"></p>
+            </div>
+            <div class="_enterprice_location">
+                <p class="_enterprice_location_p" th:text="${review.getLocationFrom() + ' - ' + review.getLocationTo()}"></p>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/index/index.js}"></script>
+</body>
+</html>

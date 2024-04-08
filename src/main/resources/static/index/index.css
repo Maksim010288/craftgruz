@@ -1,0 +1,61 @@
+.reviews{
+    width: 309px;
+    height: 290px;
+    border: 1px solid red;
+    border-radius: 24px;
+    background: #e4c8c8;
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.reviews p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+textarea{
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    color: #1c1c95;
+    font-size: 18px;
+}
+
+.submit{
+    width: 100px;
+    height: 25px;
+    color: white;
+    background: darkcyan;
+    border: none;
+    border-radius: 5px;
+}
+
+.input{
+    width: 250px;
+    height: 30px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border-style: none;
+    color: #1c1c95;
+}
+
+.input::placeholder{
+    color: #dee2e8;
+    font-size: 18px;
+}
+
+.reviews_blok1{
+    width: 335px;
+    height: 250px;
+    margin: 40px 12px 0 10px;
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    box-shadow: 0 0 10px 2px #dee2e8;
+}
