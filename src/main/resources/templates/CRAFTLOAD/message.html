@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review message</title>
+    <link rel="stylesheet" href="/craftload/css/reviews.css" type="text/css">
+</head>
+<body class="body_message">
+    <div class="reviews_block_reviews">
+        <div class="hidden">
+            <div class="reviews">
+                <div class="header_reviews">
+                    <p>Відгук про перевезення</p>
+                    <a href="/">
+                        <div class="img">
+                           <img src="/craftload/icons/end3.png" alt="" width="30" height="30">
+                        </div>
+                    </a>
+                </div>
+                <form action="/reviews/add" method="post">
+                    <div>
+                        <input class="enterprise input" type="text" placeholder="Назва компанії" name="enterprise"><br/>
+                        <input class="from input" type="text" placeholder="Звідки їхали" name="locationFrom">
+                        <input class="to input" type="text" placeholder="Куда прямували" name="locationTo">
+                        <textarea class="input1" name="reviews_text" id="review" cols="40" rows="60"></textarea>
+                        <br/>
+                        <input class="submitMessage" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/craftload/js/message.js"></script>
+</div>
+</body>
+</html>

@@ -1,7 +1,9 @@
 package com.example.CraftGruz.controller;
 
+import com.example.CraftGruz.service.ClientsService;
 import com.example.CraftGruz.model.MessageSenderModel;
 import com.example.CraftGruz.service.CraftGruzService;
+import com.example.CraftGruz.service.MailSenderService;
 import com.example.CraftGruz.service.Reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -18,44 +20,54 @@ import java.util.concurrent.Future;
 public class CraftGruzController {
 
     @Autowired
-    private final CraftGruzService craftGruzService;
+    private MailSenderService mailSenderService;
 
-    public CraftGruzController(CraftGruzService craftGruzService) {
-        this.craftGruzService = craftGruzService;
+    @Autowired
+    private CraftGruzService craftGruzService;
+
+    @Autowired
+    private ClientsService clientsService;
+
+
+    public CraftGruzController(MailSenderService mailSenderService) {
+        this.mailSenderService = mailSenderService;
     }
-
-    @GetMapping("/reviews")
-    public String mainPages(Model model){
-        model.addAttribute("list", craftGruzService.getReviewsList());
-        return "TM_CRAFT_GRUZ/CRAFT GRUZ";
-    }
-
 
     @GetMapping("/")
-    public String index(){
-        return "index/index";
+    public String mainPages(Model model) {
+        model.addAttribute("list", craftGruzService.getReviewsList());
+        model.addAttribute("listReviews", craftGruzService.getAllReviews());
+        return "CRAFTLOAD/tmgruz";
     }
+
+    @GetMapping("/message")
+    public String messageReview() {
+        return "CRAFTLOAD/message";
+    }
+
 
     @PostMapping("/reviews/add")
     public String reviewsForm(@RequestParam String enterprise,
                               @RequestParam String locationFrom,
                               @RequestParam String locationTo,
-                              @RequestParam String reviews_text){
+                              @RequestParam String reviews_text) {
         Reviews reviews = new Reviews(enterprise, reviews_text, locationFrom, locationTo);
         craftGruzService.submitNewReview(reviews);
-        System.out.println(craftGruzService.getReviewsList());
-        return "redirect:/reviews";
+        craftGruzService.addReview(reviews);
+        return "redirect:/";
     }
 
     @Async
-    @PostMapping("/send/mail")
+    @PostMapping("send/mail")
     protected Future<String> sendMail(@RequestParam String departure,
                                       @RequestParam String importance,
-                                      @RequestParam Integer weight,
+                                      @RequestParam String weight,
                                       @RequestParam String name,
-                                      @RequestParam String phone){
-        MessageSenderModel model = new MessageSenderModel(departure, importance, weight, name, phone);
-        craftGruzService.sendMail("maksymbaziuk88@gmail.com", model);
-        return AsyncResult.forValue("redirect:/reviews");
+                                      @RequestParam String phone,
+                                      @RequestParam String email) {
+        MessageSenderModel model = new MessageSenderModel(departure, importance, weight, name, phone, email);
+        mailSenderService.sendMail("maksymbaziuk88@gmail.com", model);
+        clientsService.add(model);
+        return AsyncResult.forValue("redirect:/");
     }
 }

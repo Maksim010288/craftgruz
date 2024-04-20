@@ -1,0 +1,47 @@
+body{
+    background-image: url('../images/fon11.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body input{
+    width: 300px;
+    height: 70px;
+    padding: 20px;
+    border-style: none;
+    border-radius: 50px;
+    color: white;
+    background-color: darkcyan;
+    position: absolute;
+    top:50%;
+    transition: all ease-in-out 1s;
+    
+}
+
+body input{
+    position: absolute;
+    left:40%;
+    transition: all ease-in-out 1s;
+}
+
+@media screen and (max-width: 450px) {
+    body input{
+        width: 99%;
+        height: 50px;
+        padding: 20px;
+        border-style: none;
+        border-radius: 50px;
+        color: white;
+        background-color: darkcyan;
+        position: absolute;
+        top:45%;
+        
+    }
+
+    body input{
+        position: absolute;
+        left:0;
+    }
+}

@@ -1,0 +1,103 @@
+.body_message{
+    background-image: url("../images/fon11.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+}
+
+
+.reviews_block_reviews{
+    width: 100%;
+    z-index: 999;
+    display: block;
+}
+
+ .hidden{
+     width: 100%;
+     padding: 30px 0 0 0;
+     display: flex;
+     justify-content: center;
+ }
+
+ .reviews{
+     width: 100%;
+     border-radius: 24px;
+     background-color: rgb(0,0,0,0);
+     padding: 0 20px 40px 20px;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+ }
+
+ .header_reviews{
+     display: flex;
+     justify-content: center;
+ }
+
+ .reviews p{
+     font-size: 20px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-weight: bold;
+     float: left;
+     color: white;
+ }
+
+ .img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 50px;
+     top:20px;
+ }
+
+ .img img{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+ }
+
+.submitMessage{
+    width: 90%;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border-style: none;
+    background: darkcyan;
+    color: white;
+}
+
+ .input{
+     width: 90%;
+     height: 50px;
+     padding: 0 10px 0 10px;
+     margin: 10px 0 5px 0;
+     border-radius: 10px;
+     border-style: none;
+     color: #1c1c95;
+     font-size: 24px;
+ }
+
+.input1{
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+    margin: 10px 0 5px 0;
+    border-radius: 10px;
+    border-style: none;
+    color: #1c1c95;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+ .input::placeholder{
+     color: #dee2e8;
+     font-size: 18px;
+ }
+
+
+
+

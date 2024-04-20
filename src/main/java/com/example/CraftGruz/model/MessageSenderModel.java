@@ -10,9 +10,10 @@ import org.springframework.stereotype.Component;
 public class MessageSenderModel {
     private String pointOfDeparture;
     private String itemOfImportance;
-    private Integer weight;
+    private String weight;
     private String firstName;
     private String numberPhone;
+    private String email;
 
     public MessageSenderModel() {
     }
@@ -22,10 +23,11 @@ public class MessageSenderModel {
     @Override
     public String toString() {
         return "Клієнт:\n" +
+                "Імя: " + firstName +  "\n" +
+                "Телефон: " + numberPhone + "\n" +
+                "Email: " + email + "\n" +
                 "Відправка: " + pointOfDeparture + "\n" +
                 "Прибуття: " + itemOfImportance +  "\n" +
-                "Вага: " + weight +  " кг. \n" +
-                "Імя: " + firstName +  "\n" +
-                "Телефон: " + numberPhone;
+                "Вага: " + weight +  " кг. \n";
     }
 }
