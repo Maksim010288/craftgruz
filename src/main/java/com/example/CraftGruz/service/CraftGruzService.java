@@ -26,15 +26,10 @@ public class CraftGruzService {
 
     Logger LOGGER = Logger.getLogger(CraftGruzService.class);
 
-    private final List<Reviews> reviewsList = new ArrayList<>();
     private final List<CraftGruzEntity> listCraftgruzEntity = new ArrayList<>();
 
     @Autowired
     private CraftLoadRepository craftLoadRepository;
-
-    public void submitNewReview(Reviews reviews) {
-        reviewsList.add(reviews);
-    }
 
     public void addReview(Reviews reviews) {
         CraftGruzEntity craftGruzEntity = new CraftGruzEntity(
@@ -47,7 +42,6 @@ public class CraftGruzService {
     }
 
     public List<CraftGruzEntity> getAllReviews() {
-        listCraftgruzEntity.addAll(craftLoadRepository.findAll());
-        return listCraftgruzEntity;
+        return craftLoadRepository.findAll();
     }
 }

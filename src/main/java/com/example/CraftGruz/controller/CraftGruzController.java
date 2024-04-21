@@ -35,7 +35,6 @@ public class CraftGruzController {
 
     @GetMapping("/")
     public String mainPages(Model model) {
-        model.addAttribute("list", craftGruzService.getReviewsList());
         model.addAttribute("listReviews", craftGruzService.getAllReviews());
         return "CRAFTLOAD/tmgruz";
     }
@@ -52,7 +51,6 @@ public class CraftGruzController {
                               @RequestParam String locationTo,
                               @RequestParam String reviews_text) {
         Reviews reviews = new Reviews(enterprise, reviews_text, locationFrom, locationTo);
-        craftGruzService.submitNewReview(reviews);
         craftGruzService.addReview(reviews);
         return "redirect:/";
     }
