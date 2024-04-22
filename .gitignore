@@ -3,6 +3,7 @@ HELP.md
 .mvn/
 song
 src/test/
+src/main/resources/application.properties
 target/
 CraftGruz.iml
 
