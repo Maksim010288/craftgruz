@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "craftload_clients")
+@Table(name = "craft_gruz_clients")
 @Getter
 @AllArgsConstructor
 @ToString

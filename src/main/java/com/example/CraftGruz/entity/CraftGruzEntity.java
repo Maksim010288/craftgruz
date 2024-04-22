@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "craftload_reviews")
+@Table(name = "craft_gruz_review")
 @AllArgsConstructor
 @ToString
 public class CraftGruzEntity {
