@@ -9,3 +9,5 @@ CraftGruz.iml
 
 mvnw
 mvnw.cmd
+
+*.gz

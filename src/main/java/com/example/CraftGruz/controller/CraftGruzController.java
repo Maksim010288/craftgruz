@@ -5,6 +5,8 @@ import com.example.CraftGruz.model.MessageSenderModel;
 import com.example.CraftGruz.service.CraftGruzService;
 import com.example.CraftGruz.service.MailSenderService;
 import com.example.CraftGruz.service.Reviews;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
@@ -18,6 +20,8 @@ import java.util.concurrent.Future;
 
 @Controller
 public class CraftGruzController {
+
+    private Logger LOGGER = Logger.getLogger(CraftGruzController.class);
 
     @Autowired
     private MailSenderService mailSenderService;
@@ -35,7 +39,13 @@ public class CraftGruzController {
 
     @GetMapping("/")
     public String mainPages(Model model) {
-        model.addAttribute("listReviews", craftGruzService.getAllReviews());
+        try {
+            model.addAttribute("listReviews", craftGruzService.getAllReviews());
+        }catch (Exception e){
+            model.addAttribute("exception", "Базу даних не знайдено");
+
+        }
+
         return "CRAFTLOAD/tmgruz";
     }
 
@@ -62,10 +72,17 @@ public class CraftGruzController {
                                       @RequestParam String weight,
                                       @RequestParam String name,
                                       @RequestParam String phone,
-                                      @RequestParam String email) {
-        MessageSenderModel model = new MessageSenderModel(departure, importance, weight, name, phone, email);
-        mailSenderService.sendMail("maksymbaziuk88@gmail.com", model);
-        clientsService.add(model);
+                                      @RequestParam String email,
+                                      Model model) {
+        MessageSenderModel messageSenderModel = new MessageSenderModel(departure, importance, weight, name, phone, email);
+        mailSenderService.sendMail("maksymbaziuk88@gmail.com", messageSenderModel);
+        try {
+            clientsService.add(messageSenderModel);
+        }catch (Exception e){
+            model.addAttribute("exceptionMessage", "Повідомлення в базу даних не збережено");
+            LOGGER.log(Level.DEBUG, e.getMessage());
+        }
+
         return AsyncResult.forValue("redirect:/");
     }
 }

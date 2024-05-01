@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/craftload/css/CrafrGruz.css" type="text/css">
     <link rel="stylesheet" href="/craftload/css/reviews.css" type="text/css">
+    <link rel="stylesheet" href="/craftload/css/orderCall.css" type="text/css">
     <link rel="icon" href="/craftload/images/craftgruzfoto.jpg" media="all">
     <title>CRAFT GRUZ</title>
 </head>
@@ -426,6 +427,7 @@
                             <input class="calculateCostButtom" type="submit" value="Розрахувати вартість">
                     </div>
                     <p class="messageButtom"></p>
+                    <p class="exceptions" th:text="${exception}"></p>
                 </form>
             </div>
         </div>
@@ -457,6 +459,14 @@
             <a href="mailto:logistics-ukraine@ukr.net" target="_blank">logistics-ukraine@ukr.net</a>
         </div>
         </div>
+        <form action="http://localhost:8000/order/save" method="post">
+            <div class="block_order_a_call"></div>
+            <div class="block_order_a_call_form">
+                <input type="text" class="block_order_a_call_form_input name" placeholder="Імя" name="name">
+                <input type="tel" class="block_order_a_call_form_input number" placeholder="Номер телефона" name="numberPhone">
+                <input type="submit" class="block_order_a_call_form_order" value="ЗАМОВИТИ">
+            </div>
+        </form>
 
         <footer class="footer"></footer>
     </div>
@@ -466,6 +476,8 @@
     <script src="/craftload/js/leaveReview.js"></script>
     <script src="/craftload/js/closedFormReview.js"></script>
     <script src="/craftload/js/scroll.js"></script>
+    <script src="/craftload/js/exception.js"></script>
+    <script src="/craftload/js/order_call.js"></script>
 </body>
 </html>
 

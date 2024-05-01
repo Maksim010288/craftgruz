@@ -1,0 +1,50 @@
+.block_order_a_call{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    opacity: .5;
+}
+
+.block_order_a_call_form{
+    height: 150px;
+    padding: 50px;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    background-color: white;
+    border-radius: 40px;
+    border-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+.block_order_a_call_form_input{
+    height: 35px;
+    padding-left: 10px;
+    background-color: #dee2e8;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-style: hidden;
+}
+
+.block_order_a_call_form_input::placeholder{
+    color: darkcyan;
+}
+
+.block_order_a_call_form_order{
+    margin: 20px 0 0 0;
+    padding: 20px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: darkcyan;
+    color: white;
+}

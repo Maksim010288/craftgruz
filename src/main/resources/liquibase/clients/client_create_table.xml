@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="02" author="Maksim Bazyk">
+        <createTable tableName="craft_gruz_clients">
+            <column name="id" type="integer" autoIncrement="true">
+                <constraints primaryKeyName="id_outfit"/>
+            </column>
+            <column name="name" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="phone" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="email" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="departure" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="importanse" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="weight" type="varchar(20)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="date" type="varchar(10)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="time" type="varchar(10)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

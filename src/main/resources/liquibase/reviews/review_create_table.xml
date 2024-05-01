@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="02" author="Maksim Bazyk">
+        <createTable tableName="craft_gruz_reviews">
+            <column name="id" type="integer" autoIncrement="true">
+                <constraints primaryKeyName="id_outfit"/>
+            </column>
+            <column name="enterprise" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="location_to" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="location_from" type="varchar(30)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="review_text" type="varchar(200)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="date" type="varchar(15)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="time" type="varchar(10)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
