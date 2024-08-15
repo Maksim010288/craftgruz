@@ -1,0 +1,97 @@
+.company {
+    display: flex;
+    margin: 20px 0;
+}
+
+.photo {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.photo img {
+    width: 100%;
+    height: 500px;
+}
+
+.company_advantages_of_our_ {
+    width: 100%;
+    margin-right: 10px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-about-us{
+    padding: 10px;
+}
+
+.advantages-about-us .about_us{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    background-color: bisque;
+    border: none;
+}
+
+.advantages_of_our_company-p{
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    margin:-10px 0 0 0;
+}
+
+.advantages_of_our_company_view{
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    text-align: start;
+}
+
+.company_benefits {
+    width: 100%;
+    margin:0 0 -40px 0;
+    padding: 10px 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.advantages_of_our_company{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages_of_our_company_data {
+    margin: 30px 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 30px;
+
+}
+
+.button {
+    height: 50px;
+    padding: 10px 100px;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: -10px;
+}
+
+.about_us{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: bisque;
+    border: none;
+}
+
+@media  screen and (max-width: 1000px){
+    .company {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}

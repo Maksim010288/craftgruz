@@ -1,0 +1,347 @@
+.header {
+  width: 98.4%;
+  background-color: rgb(242, 246, 245);
+  justify-content: center;
+  text-align: left;
+  padding: 10px;
+}
+.header header {
+  display: flex;
+  align-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.header header .img {
+  flex-basis: 5%;
+}
+.header header .menu {
+  flex-basis: 70%;
+  flex-shrink: 2;
+  align-items: end;
+}
+.header header .number_phone {
+  text-align: end;
+  flex-basis: 15%;
+  flex-shrink: 0;
+}
+.header header .call_button {
+  flex-shrink: 0;
+  flex-basis: 20%;
+}
+.header header .img img {
+  width: 100px;
+  height: 70px;
+}
+.header header .menu ul {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.header header .menu ul li {
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  list-style: none;
+  flex-shrink: 1;
+}
+.header header .menu ul li:hover {
+  color: red;
+}
+.header .number_phone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 2;
+}
+.header .number_phone a {
+  text-decoration: none;
+}
+.header header .call_button {
+  justify-content: end;
+  text-align: end;
+  padding: 10px 0 10px 0;
+}
+@media screen and (max-width: 1000px) {
+  .header header .menu {
+    display: none;
+  }
+  .header header .img {
+    flex-basis: 5%;
+  }
+  .header header .number_phone {
+    text-align: end;
+    flex-basis: 40%;
+  }
+  .header header .call_button {
+    flex-basis: 40%;
+  }
+}
+
+.footer-main {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+.footer-main .footer-main-block-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-right: 2px solid black;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.footer-main .main {
+  font-size: 20px;
+}
+.footer-main .footer-main-block-ul li {
+  list-style: none;
+  font-weight: bold;
+}
+.footer-main .footer-main-block-ul li:hover {
+  color: red;
+}
+.footer-main .footer-main-block2 {
+  text-align: center;
+  padding: 10px 60px;
+  border-right: 2px solid black;
+}
+.footer-main .footer-main-block2-work-clock {
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer-main .footer-main-block2-img {
+  width: 150px;
+  height: 100px;
+}
+.footer-main .footer-main-block2-social-natworks-img {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+.footer-main .footer-main-block3-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  align-self: start;
+  gap: 30px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.footer-main .footer-main-block3 {
+  margin-left: -15px;
+}
+.footer-main .footer-main-block3-ul li {
+  list-style: none;
+  font-weight: bold;
+}
+.footer-main .footer-main-block3-ul a {
+  text-decoration: none;
+  color: black;
+}
+.footer-main .footer-main-block3-ul-li {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+@media screen and (max-width: 700px) {
+  .footer-main .footer-main {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+  }
+  .footer-main .footer-main-block-ul {
+    border-right: none;
+  }
+  .footer-main .footer-main-block2 {
+    text-align: center;
+    padding: 10px 60px;
+    border-right: none;
+  }
+  .footer-main .footer-main-block3-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    align-self: start;
+    gap: 30px;
+    padding-right: 15px;
+    cursor: pointer;
+  }
+}
+
+.row {
+  width: 100%;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row .col-12 {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.row .col-sm-12-img {
+  width: 100%;
+  text-align: end;
+}
+.row .col-sm-12-img img {
+  width: 20px;
+  height: 20px;
+}
+.row .col-12 input,
+.row .col-12 textarea {
+  width: 100%;
+  outline: none;
+  padding: 10px 10px;
+  resize: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #a7afaf;
+}
+.row .col-12 input::placeholder, .row textarea::placeholder {
+  color: #054493;
+}
+.row .coll-12-button {
+  padding: 10px 100px;
+  background-color: blue;
+  color: white;
+  border-radius: 30px;
+  margin-top: -10px;
+}
+.row .message {
+  width: 100%;
+  text-align: center;
+}
+.row .confirmation {
+  color: green;
+}
+.row .error {
+  color: red;
+}
+
+.content {
+  display: none;
+}
+
+.navigation {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  align-self: center;
+}
+.navigation button {
+  width: 150px;
+  padding: 10px;
+  background-color: #6c6c2b;
+  margin: 10px;
+  border-style: none;
+}
+.navigation button:hover {
+  background-color: #b5b549;
+}
+
+.order {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  display: block;
+  justify-content: center;
+  border-right: 1px solid black;
+  overflow-y: scroll;
+}
+.order table {
+  width: 95%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 10px;
+  font-family: Arial, "sans-serif";
+  font-size: 0.8em;
+}
+.order table tr th, .order tr td {
+  margin: 5px;
+  padding: 5px 40px;
+}
+.order table tr button {
+  transition: 0.2s;
+  width: 100%;
+  padding: 10px;
+  border-style: none;
+  background-color: white;
+}
+.order table tr button:hover {
+  background-color: #66aaad;
+  color: white;
+}
+
+.cost_calculation {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  justify-content: center;
+  overflow-y: scroll;
+}
+.cost_calculation table {
+  width: 95%;
+  margin: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-family: Arial, "sans-serif";
+  font-size: 0.8em;
+}
+.cost_calculation table tr th, .cost_calculation tr td {
+  margin: 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+.cost_calculation table tr button {
+  transition: 0.2s;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-style: none;
+}
+.cost_calculation table tr button:hover {
+  background-color: #66aaad;
+  color: white;
+}
+.cost_calculation .message {
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  color: red;
+}
+
+.contact-us {
+  width: 100%;
+  height: 100px;
+  background-color: #66aaad;
+}
+
+.user-page-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,17 @@
+.content-us{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.content-us .form{
+    width: 15%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-us .form textarea{
+    margin-bottom: 10px;
+}

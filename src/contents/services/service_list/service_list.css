@@ -1,0 +1,47 @@
+.services{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
+
+.services_list{
+    width: 70%;
+    text-align: start;
+}
+
+.services_list img{
+    width: 100%;
+    height: 300px;
+}
+
+@media screen and (max-width: 1200px){
+    .services_list{
+        width: 85%;
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .services_list{
+        width: 85%;
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .services_list{
+        width: 85%;
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services_list {
+        width: 100%;
+        text-align: start;
+    }
+}
+

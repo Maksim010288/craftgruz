@@ -1,0 +1,61 @@
+.row {
+    width: 100%;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.col-12 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.col-sm-12-img {
+    width: 100%;
+    text-align: end;
+}
+
+.col-sm-12-img img {
+    width: 20px;
+    height: 20px;
+
+}
+
+.col-12 input {
+    width: 100%;
+    padding: 5px;
+}
+
+.col-12 textarea {
+    width: 100%;
+}
+
+.coll-12-button {
+    padding: 10px 100px;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    margin-top: -10px;
+
+}
+
+.message {
+    width: 100%;
+    text-align: center;
+}
+
+.confirmation {
+    color: green;
+}
+
+.error {
+    color: red;
+}

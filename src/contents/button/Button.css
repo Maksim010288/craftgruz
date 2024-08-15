@@ -1,0 +1,17 @@
+.button{
+    height: 50px;
+    padding: 10px 50px;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    margin-left: 50px;
+    flex-shrink: 1;
+}
+
+.button:hover{
+    opacity: 0.8;
+}
+
+.button:active{
+    background-color: red;
+}

@@ -1,0 +1,63 @@
+.order_call {
+    width: 100%;
+    height: 700px;
+    background-color: #cccccc;
+    display: none;
+    z-index: 999;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.order-call-message{
+    color: red;
+}
+
+.order_call_header {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    z-index: 1000;
+}
+
+.order_call_header_form{
+    width: 25%;
+    padding: 50px 10px;
+    background-color: #e4e5e4;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order_call_header_name,
+.order_call_header_number{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.order_call__header_button{
+    padding: 10px;
+    background-color: blue;
+    color: #e4e5e4;
+}
+
+.order_call_header_end{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.order_call_header_end_img{
+    width: 20px;
+    height: 20px;
+
+}

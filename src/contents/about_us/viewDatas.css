@@ -1,0 +1,23 @@
+.advantages_of_our_company_view{
+    width: 43%;
+    padding: 10px;
+
+}
+
+div img{
+    width: 50px;
+    height: 40px;
+}
+
+
+.advantages-of-our-company-view-title{
+    font-size: 24px;
+    color: #66aaad;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.description{
+    margin-top: 0;
+}
+

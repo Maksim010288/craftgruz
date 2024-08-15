@@ -1,0 +1,21 @@
+.list-heads-div {
+    width: 20%;
+    gap: 10px;
+    flex-basis: 20%;
+    margin: 125px 0 0 20px;
+
+}
+
+.id {
+    width: 10px;
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+}
+
+.title {
+    font-size: 1em;
+    color: black;
+    text-align: start;
+}

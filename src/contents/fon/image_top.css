@@ -1,0 +1,112 @@
+.fon-header {
+    background-image: url("../../../public/images/fon11.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 100%;
+    height: 700px;
+    color: white;
+}
+
+.fon-header img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 20px;
+}
+
+.fon-header-block{
+    width: 60%;
+    height:400px;
+    position: relative;
+    top:70px;
+    left:70px;
+}
+
+.img_p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.img_p p{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.text2{
+    margin-top: -5px;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: start;
+}
+
+.text3{
+    margin-top: -15px;
+    font-size: 1.3em;
+    text-align: start;
+}
+
+@media screen and (max-width: 800px){
+    .img_p p{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .text2{
+        margin-top: -5px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .text3{
+        margin-top: -15px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .fon-header-block{
+        width: 85%;
+
+    }
+    .img_p p{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .text2{
+        margin-top: -5px;
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .text3{
+        margin-top: -15px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .fon-header-block{
+        width: 85%;
+
+    }
+    .img_p p{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .text2{
+        margin-top: -5px;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    .text3{
+        margin-top: -15px;
+        font-size: 1.2em;
+    }
+}
+

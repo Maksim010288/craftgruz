@@ -1,0 +1,19 @@
+.services{
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services_p{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: bisque;
+    border: none;
+}
+
+.services_p_{
+    font-weight: bold;
+    font-size: 24px;
+}
