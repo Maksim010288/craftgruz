@@ -11,7 +11,7 @@ public class OrderCellService {
     @Autowired
     private OrderCellRepository orderCellRepository;
 
-    public void saveOrder(OrderCellEntity orderCellEntity){
+    public void saveOrder(OrderCellEntity orderCellEntity) {
         orderCellRepository.save(orderCellEntity);
     }
 }

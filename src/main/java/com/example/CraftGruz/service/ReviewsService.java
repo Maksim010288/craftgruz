@@ -5,16 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class Reviews {
+public class ReviewsService {
 
     private String enterpriseName;
     private String message;
     private String locationFrom;
     private String locationTo;
 
-    public Reviews(){}
+    public ReviewsService(){}
 
-    public Reviews(String enterpriseName, String message, String locationFrom, String locationTo){
+    public ReviewsService(String enterpriseName, String message, String locationFrom, String locationTo){
         this.enterpriseName  = enterpriseName;
         this.message = message;
         this.locationFrom = locationFrom;

@@ -19,6 +19,6 @@ public class OrderCellController {
                      @RequestParam String numberPhone) {
         OrderCellEntity orderCell = new OrderCellEntity(name, numberPhone);
         orderCellService.saveOrder(orderCell);
-        return "/CRAFTLOAD/tmgruz";
+        return "CRAFTLOAD/tmgruz";
     }
 }

@@ -4,7 +4,8 @@ import com.example.CraftGruz.service.ClientsService;
 import com.example.CraftGruz.model.MessageSenderModel;
 import com.example.CraftGruz.service.CraftGruzService;
 import com.example.CraftGruz.service.MailSenderService;
-import com.example.CraftGruz.service.Reviews;
+import com.example.CraftGruz.service.ReviewsService;
+import jakarta.annotation.security.RolesAllowed;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,9 +61,9 @@ public class CraftGruzController {
                               @RequestParam String locationFrom,
                               @RequestParam String locationTo,
                               @RequestParam String reviews_text) {
-        Reviews reviews = new Reviews(enterprise, reviews_text, locationFrom, locationTo);
+        ReviewsService reviews = new ReviewsService(enterprise, reviews_text, locationFrom, locationTo);
         craftGruzService.addReview(reviews);
-        return "redirect:/";
+        return "redirect:/craft";
     }
 
     @Async
